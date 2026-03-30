@@ -11,13 +11,27 @@
 
     "ServerScriptService": {
       "Examples": {
-          "$path": "examples/"
+          "$className": "Folder",
+
+          "SignaLuau": {
+            "$path": "examples/SignaLuau"
+          },
+
+          "RemoteService": {
+            "$path": "examples/RemoteService"
+          }
         }
     },
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
-        
+        "Examples": {
+          "$className": "Folder",
+
+          "InterLink": {
+            "$path": "examples/InterLink"
+          }
+        }
       }
     }
   }

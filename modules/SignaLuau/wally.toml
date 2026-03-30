@@ -1,0 +1,14 @@
+[package]
+name = "gordxn-rbx/signaluau"
+description = "Lightweight Luau signal and connection library"
+homepage = "https://gordxn-rbx.github.io/utilities/api/Signal/"
+repository = "https://github.com/gordxn-rbx/utilities"
+
+version = "1.0.0"
+
+license = "MIT"
+authors = ["Ashton Ivy <ashtonivy23@gmail.com>"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+exclude = ["node_modules"]

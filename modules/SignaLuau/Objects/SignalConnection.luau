@@ -25,6 +25,13 @@ type SignalConnectionInternal = {
     disconnectFunction: () -> (),
 }
 
+--[=[
+    @within SignalConnection
+	@interface SignalConnection
+
+    .Connected boolean
+	.Connect (SignalConnection) -> ()
+]=]
 export type SignalConnection = {
     Connected: boolean,
     Disconnect: (self: SignalConnection) -> ()
