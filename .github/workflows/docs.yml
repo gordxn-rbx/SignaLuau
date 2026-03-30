@@ -33,4 +33,4 @@ jobs:
           git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 
           # Build and publish docs
-          moonwave build --publish
+          moonwave build --publish --code modules
