@@ -1,0 +1,24 @@
+{
+  "name": "SignaLuau Example",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Modules": {
+        "$path": "modules"
+      }
+    },
+
+    "ServerScriptService": {
+      "Examples": {
+          "$path": "examples/"
+        }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
-local SignaLuau = require("@game/ReplicatedStorage/SignaLuau")
-
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local SignaLuau = require(ReplicatedStorage.Modules.SignaLuau)
 type SignalConnection = SignaLuau.SignalConnection
-type Signal = SignaLuau.Signal
+type Signal<T...> = SignaLuau.Signal<T...>
 
 local Object = {}
 Object.__index = Object
@@ -10,7 +10,7 @@ export type Object = {
     Name: string,
     Value: string,
 
-    ValueUpdated: Signal,
+    ValueUpdated: Signal<string>,
     
     UpdateValue: (self: Object, newValue: string) -> ()
 }
@@ -38,7 +38,7 @@ function Object.new(objectName: string, objectValue: string)
         _name = objectName,
         _value = objectValue,
 
-        _valueUpdated = SignaLuau.Signal.new()
+        _valueUpdated = SignaLuau.Signal.new()::Signal<string>
     }
 
     return setmetatable(self, meta)

@@ -1,9 +1,22 @@
---// CLASS DECLARATION
+--[=[
+@class SignalConnection
+
+A `SignalConnection` object exposes methods for managing a specific connection.
+
+Basic Implementation:
+```lua
+local signal: Signal = Signal.new()
+
+local connection: SignalConnection = signal:Connect(function(msg: string): ()
+    print(msg)
+end)
+
+signal:Fire("Hello, world!")
+connection:Disconnect()
+```
+]=]
 local SignalConnection = {}
 SignalConnection.__index = SignalConnection
-
-
---// GENERAL VARIABLES
 
 
 --// TYPE DECLARATIONS
@@ -18,7 +31,12 @@ export type SignalConnection = {
 }
 
 
---// CLASS CONSTRUCTOR
+--[=[
+Returns a constructed `Signal` object with the proper `disconnectFunction`.
+
+@param disconnectFunction Function
+@return SignalConnection
+]=]
 function SignalConnection.new(_disconnectFunction: () -> ())
     local internal: SignalConnectionInternal = {
         connected = true,
@@ -47,7 +65,9 @@ function SignalConnection.new(_disconnectFunction: () -> ())
 end
 
 
---// CLASS METHODS
+--[=[
+Disconnects a `SignalConnection` from the signal.
+]=]
 function SignalConnection:Disconnect(): ()
     if (not self.internal.connected) then return end
 

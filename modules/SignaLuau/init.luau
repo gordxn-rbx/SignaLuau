@@ -12,7 +12,7 @@ Framework.Signal = Signal
 
 --// TYPE EXPORTS
 export type SignalConnection = Signal.SignalConnection
-export type Signal = Signal.Signal
+export type Signal<T...> = Signal.Signal<T...>
 
 
 --// MODULE END

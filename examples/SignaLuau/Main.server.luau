@@ -1,8 +1,9 @@
-local SignaLuau = require("@game/ReplicatedStorage/SignaLuau")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local SignaLuau = require(ReplicatedStorage.Modules.SignaLuau)
 type SignalConnection = SignaLuau.SignalConnection
-type Signal = SignaLuau.Signal
+type Signal<T...> = SignaLuau.Signal<T...>
 
-local Object = require("@game/ReplicatedStorage/Shared/Object")
+local Object = require(script.Parent.Object)
 type Object = Object.Object
 
 local testObject: Object = Object.new("Test", "")
