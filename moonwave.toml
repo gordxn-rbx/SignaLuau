@@ -1,0 +1,13 @@
+title = "Utilities"
+format = "roblox"
+
+[[classOrder]]
+section = "SignaLuau"
+classes = ["Signal", "SignalConnection"]
+
+[home]
+enabled = true
+includeReadme = true
+
+[docusaurus]
+tagline = "Versatile and secure Roblox utility modules"

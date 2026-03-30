@@ -2,7 +2,11 @@
 local Signal = require("@self/Objects/Signal")
 
 
---// MODULE DECLARATION
+--[[
+@module SignaLuau
+
+A lightweight, consumer-grade Luau module for implementing custom signals and signal connections, designed to closely mimic the built-in `RBXScriptSignal` and `RBXScriptConnection` behavior in Roblox.
+]]
 local Framework = {}
 
 

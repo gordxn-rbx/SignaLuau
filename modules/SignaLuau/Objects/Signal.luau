@@ -2,21 +2,21 @@
 local SignalConnection = require("./SignalConnection")
 
 --[=[
-@class Signal
+    @class Signal
 
-A `Signal` object allows events to be fired and observed.
+    A `Signal` object allows events to be fired and observed.
 
-Basic Implementation:
-```lua
-local signal: Signal = Signal.new()
+    Basic Implementation:
+    ```lua
+    local signal: Signal = Signal.new()
 
-local connection: SignalConnection = signal:Connect(function(msg: string): ()
-    print(msg)
-end)
+    local connection: SignalConnection = signal:Connect(function(msg: string): ()
+        print(msg)
+    end)
 
-signal:Fire("Hello, world!")
-connection:Disconnect()
-```
+    signal:Fire("Hello, world!")
+    connection:Disconnect()
+    ```
 ]=]
 local Signal = {}
 Signal.__index = Signal
@@ -95,7 +95,7 @@ signal:Fire("Message 1")
 ```
 
 @param callback Function
-@return
+@return SignalConnection
 ]=]
 function Signal:Connect(callback: (...any) -> ()): (SignalConnection)
     local connection: SignalConnection
@@ -136,8 +136,8 @@ function Signal:Once(callback: (any) -> ()): (SignalConnection)
 end
 
 --[=[
-@return ... any
 @yields
+@return ... any
 
 Yields the current thread until the event is fired, returning the results and resuming the thread.
 

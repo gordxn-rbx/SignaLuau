@@ -37,10 +37,10 @@ Returns a constructed `Signal` object with the proper `disconnectFunction`.
 @param disconnectFunction Function
 @return SignalConnection
 ]=]
-function SignalConnection.new(_disconnectFunction: () -> ())
+function SignalConnection.new(disconnectFunction: () -> ())
     local internal: SignalConnectionInternal = {
         connected = true,
-        disconnectFunction = _disconnectFunction
+        disconnectFunction = disconnectFunction
     }
 
     local meta = {
