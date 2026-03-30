@@ -26,11 +26,11 @@ type SignalConnectionInternal = {
 }
 
 --[=[
-    @within SignalConnection
-	@interface SignalConnection
+@within SignalConnection
+@interface SignalConnection
 
-    .Connected boolean
-	.Connect (SignalConnection) -> ()
+.Connected boolean
+.Connect (SignalConnection) -> ()
 ]=]
 export type SignalConnection = {
     Connected: boolean,

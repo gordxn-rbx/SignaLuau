@@ -32,15 +32,15 @@ type SignalInternal = {
 }
 
 --[=[
-    @within Signal
-	@interface Signal
+@within Signal
+@interface Signal
 
-	.Connect (Signal, (...any) -> ()) -> (SignalConnection)
-	.Destroy (Signal) -> ()
-    .Fire (Signal, ...any) -> ()
-    .FireAsync (Signal, ...any) -> ()
-    .Once (Signal, (...any) -> ()) -> (SignalConnection)
-    .Wait (Signal) -> (...any)
+.Connect (Signal, (...any) -> ()) -> (SignalConnection)
+.Destroy (Signal) -> ()
+.Fire (Signal, ...any) -> ()
+.FireAsync (Signal, ...any) -> ()
+.Once (Signal, (...any) -> ()) -> (SignalConnection)
+.Wait (Signal) -> (...any)
 ]=]
 export type Signal<T...> = {
     Connect: (self: Signal<T...>, callback: (T...) -> ()) -> (SignalConnection),
