@@ -30,7 +30,7 @@ type SignalConnectionInternal = {
 @interface SignalConnection
 
 .Connected boolean
-.Connect (SignalConnection) -> ()
+.Disconnect (SignalConnection) -> ()
 ]=]
 export type SignalConnection = {
     Connected: boolean,
