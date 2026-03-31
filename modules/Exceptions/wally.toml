@@ -1,0 +1,14 @@
+[package]
+name = "gordxn-rbx/exceptions"
+description = "Lightweight Exceptions handling module to make error handling more universal and streamlined."
+homepage = "https://gordxn-rbx.github.io/utilities/api/Exceptions/"
+repository = "https://github.com/gordxn-rbx/utilities"
+
+version = "1.0.0"
+
+license = "MIT"
+authors = ["Ashton Ivy <ashtonivy23@gmail.com>"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+exclude = ["node_modules"]
