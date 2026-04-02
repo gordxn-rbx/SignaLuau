@@ -77,6 +77,7 @@ end
 
 
 --[=[
+@within Component
 @interface Component<T>
 @field Id string
 @field Instance T

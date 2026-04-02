@@ -34,6 +34,7 @@ type Exception = e.Exception
 export type Component<T> = Component.Component<T>
 
 --[=[
+@within Root
 @interface Root<T>
 @field Instance T
 @field Components { [string]: Component<any> }
